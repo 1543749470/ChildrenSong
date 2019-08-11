@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="宝宝看"
+        android:id="@+id/tab_look"
+        app:showAsAction="ifRoom"
+        android:enabled="true"/>
+    <item android:title="宝宝听"
+        android:id="@+id/tab_hear"
+        app:showAsAction="ifRoom"
+        android:enabled="true"/>
+    <item android:title="缓存"
+        android:id="@+id/tab_cache"
+        app:showAsAction="ifRoom"
+        android:enabled="true"/>
+</menu>
