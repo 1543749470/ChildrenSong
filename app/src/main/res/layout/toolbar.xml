@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="1dp"
+    android:layout_height="wrap_content">
+    <View android:id="@+id/status_bar_view"
+        android:layout_height="20dp"
+        android:backgroundTint="@color/item_title"
+        android:layout_width="match_parent"
+        android:background="@color/bottom_nav_checked"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="@color/splash_bg"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        >
+        <TextView android:id="@+id/toolbar_title"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:text="宝宝看"
+            android:textColor="@color/colorPrimary"
+            android:singleLine="true"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+           />
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.AppBarLayout>
