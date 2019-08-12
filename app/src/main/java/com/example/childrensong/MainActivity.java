@@ -37,7 +37,6 @@ public class MainActivity extends SimpleActivity {
     private HearFragment hearFragment;
     private CacheFragment cacheFragment;
     private FragmentManager supportFragmentManager;
-    private HandPickFragment handPickFragment;
 
     @Override
     protected void initView() {
@@ -49,14 +48,13 @@ public class MainActivity extends SimpleActivity {
         lookFragment = new LookFragment();
         hearFragment = new HearFragment();
         cacheFragment = new CacheFragment();
-        handPickFragment = new HandPickFragment();
         supportFragmentManager = getSupportFragmentManager();
         final FragmentTransaction tr = supportFragmentManager.beginTransaction();
-        tr.add(R.id.myFrameLayout,handPickFragment);
+        tr.add(R.id.myFrameLayout,lookFragment);
         tr.add(R.id.myFrameLayout,hearFragment);
         tr.add(R.id.myFrameLayout,cacheFragment);
 
-        tr.show(handPickFragment);
+        tr.show(lookFragment);
         tr.hide(hearFragment);
         tr.hide(cacheFragment);
         tr.commit();
@@ -67,21 +65,21 @@ public class MainActivity extends SimpleActivity {
                 switch (menuItem.getItemId()){
                     case R.id.tab_look:
                         toolbarTitle.setText("宝宝看");
-                        tr1.show(handPickFragment);
+                        tr1.show(lookFragment);
                         tr1.hide(hearFragment);
                         tr1.hide(cacheFragment);
                         break;
                     case R.id.tab_hear:
                         toolbarTitle.setText("宝宝听");
                         tr1.show(hearFragment);
-                        tr1.hide(handPickFragment);
+                        tr1.hide(lookFragment);
                         tr1.hide(cacheFragment);
                         break;
                     case R.id.tab_cache:
                         toolbarTitle.setText("缓存");
                         tr1.show(cacheFragment);
                         tr1.hide(hearFragment);
-                        tr1.hide(handPickFragment);
+                        tr1.hide(lookFragment);
                         break;
                 }
                 tr1.commit();
