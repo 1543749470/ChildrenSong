@@ -16,11 +16,18 @@
         android:theme="@style/AppTheme">
         <activity android:name=".WebActivity"></activity>
         <activity android:name=".MainActivity">
+=======
+        <activity android:name=".GuideActivity">
+>>>>>>> 94c9bc13ef91184506db07bccfa32a7a5608176c
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 

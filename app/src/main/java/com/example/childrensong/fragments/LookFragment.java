@@ -1,6 +1,7 @@
 package com.example.childrensong.fragments;
 
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -10,6 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.childrensong.Beans.TabHandpickBeans;
+=======
+import android.support.annotation.Nullable;
+import android.view.Menu;
+import android.view.MenuInflater;
+
+>>>>>>> 94c9bc13ef91184506db07bccfa32a7a5608176c
 import com.example.childrensong.R;
 import com.example.childrensong.adapters.MyVpAdapter;
 import com.example.childrensong.base.BaseFragment;
@@ -52,6 +59,7 @@ public class LookFragment extends BaseFragment<LookTabInterface.LookTabView, Bas
         return R.layout.look_fragment_layout;
     }
 
+<<<<<<< HEAD
 
     @Override
     protected BasePresenter<LookTabInterface.LookTabView> createPresenter() {
@@ -99,6 +107,20 @@ public class LookFragment extends BaseFragment<LookTabInterface.LookTabView, Bas
 
 
 
+=======
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.clear();
+        getActivity().getMenuInflater().inflate(R.menu.ting_search_black,menu);
+    }
+>>>>>>> 94c9bc13ef91184506db07bccfa32a7a5608176c
 }
 
 
