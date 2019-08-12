@@ -5,16 +5,15 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Adapter;
+
 
 import com.example.childrensong.Beans.HearBean;
 import com.example.childrensong.R;
 import com.example.childrensong.adapters.HearVpAdaper;
 import com.example.childrensong.base.SimpleFragment;
 import com.example.childrensong.fragments.Hear.ChoicenessFragment;
+import com.example.childrensong.fragments.Hear.ReuseFragment;
 import com.example.childrensong.http.Globle;
 import com.example.childrensong.http.MyServer;
 
@@ -35,9 +34,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 //宝宝听界面
 public class HearFragment extends SimpleFragment {
-    @BindView(R.id.hear_table)
+    @BindView(R.id.TabLayoutHear)
     TabLayout mTable;
-    @BindView(R.id.hear_vp)
+    @BindView(R.id.ViewPagerVP)
     ViewPager mVp;
     private ArrayList<Fragment> list;
     private FragmentManager childFragmentManager;
@@ -52,6 +51,8 @@ public class HearFragment extends SimpleFragment {
         list.add(choicenessFragment);
         tablist = new ArrayList<>();
         tablist.add("精选");
+
+
 
 
         initdata();
@@ -82,6 +83,11 @@ public class HearFragment extends SimpleFragment {
                         }
 
                         HearVpAdaper hearVpAdaper = new HearVpAdaper(childFragmentManager, list, tablist);
+
+                        for (int i = 0; i < tablist.size()-1; i++) {
+                            list.add(new ReuseFragment());
+                        }
+
                         mVp.setAdapter(hearVpAdaper);
                         mTable.setupWithViewPager(mVp);
 
@@ -98,8 +104,6 @@ public class HearFragment extends SimpleFragment {
 
                     }
                 });
-
-
     }
 
     @Override

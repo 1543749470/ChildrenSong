@@ -2,6 +2,7 @@ package com.example.childrensong.http;
 
 import com.example.childrensong.Beans.HandPickBean;
 import com.example.childrensong.Beans.HearBean;
+import com.example.childrensong.Beans.HearFuYongBean;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -16,5 +17,11 @@ public interface MyServer {
 
     @GET("api/v1/audio_categories?channel=original")
     Observable<HearBean>   getHearDate();
+
+
+    @GET("api/v1/audio_categories/1/playlists?channel=new&offset=0&limit=20")
+    Observable<HearFuYongBean>   getHearList();
+
+
 
 }
