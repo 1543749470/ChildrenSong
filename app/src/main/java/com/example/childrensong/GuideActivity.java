@@ -59,7 +59,7 @@ public class GuideActivity extends AppCompatActivity implements Animation.Animat
             }
         },1500); // 延时1秒
 
-
+        timer.cancel();
     }
 
     @Override
