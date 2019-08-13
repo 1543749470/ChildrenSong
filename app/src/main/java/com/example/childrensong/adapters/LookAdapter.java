@@ -35,7 +35,7 @@ public class LookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         ViewHolder holder = (ViewHolder) viewHolder;
         holder.look_item_title.setText(list.get(i).getName());
         holder.look_item_content.setText(list.get(i).getDescription());
-        holder.look_item_seties.setText(list.get(i).getVideo_count()+"级");
+        holder.look_item_seties.setText("共"+list.get(i).getVideo_count()+"级");
         Glide.with(context)
                 .load(list.get(i).getImage_url())
                 .into(holder.look_item_img);

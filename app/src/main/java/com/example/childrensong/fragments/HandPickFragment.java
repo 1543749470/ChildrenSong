@@ -32,10 +32,12 @@ public class HandPickFragment extends BaseFragment<LookInterface.LookView, BaseP
     int id = 1;
     private LookAdapter lookAdapter;
     private LookPresenterImp<LookInterface.LookView> lookViewLookPresenterImp1;
+    private int id1;
 
     @Override
     protected void initView() {
-        lookViewLookPresenterImp.getHttp(id);
+        id1 = getArguments().getInt("id");
+        lookViewLookPresenterImp.getHttp(id1);
         handpickRec.setLayoutManager(new LinearLayoutManager(getActivity()));
         handpickRec.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL));
         lookAdapter = new LookAdapter(getActivity());

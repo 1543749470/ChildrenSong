@@ -7,6 +7,7 @@ import com.example.childrensong.base.SimpleFragment;
 public class CacheFragment extends SimpleFragment {
     @Override
     protected void initView() {
+
     }
 
     @Override
