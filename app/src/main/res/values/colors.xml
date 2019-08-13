@@ -38,4 +38,5 @@
     <color name="Grey700">#616161</color>
     <color name="Grey800">#3D3D3D</color>
     <color name="Grey900">#212121</color>
+    <color name="main_color">#27d081</color>
 </resources>

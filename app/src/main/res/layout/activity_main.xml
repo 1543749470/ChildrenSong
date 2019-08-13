@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:fitsSystemWindows="false"
     android:layout_height="match_parent"
+    android:id="@+id/ll_container"
     tools:context=".MainActivity">
 
     <include layout="@layout/toolbar" />
