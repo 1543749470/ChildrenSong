@@ -5,9 +5,6 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.View;
-import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -15,7 +12,7 @@ import android.widget.Toast;
 
 import java.util.Timer;
 import java.util.TimerTask;
-
+//引导页面
 public class GuideActivity extends AppCompatActivity implements Animation.AnimationListener {
 
     private ImageView guideImg;
@@ -52,14 +49,12 @@ public class GuideActivity extends AppCompatActivity implements Animation.Animat
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-
                 MediaPlayer mediaPlayer = MediaPlayer.create(GuideActivity.this, R.raw.ergedd_introduce);
                 mediaPlayer.start();
 
             }
         },1500); // 延时1秒
-
-        timer.cancel();
+//提交了奥！
     }
 
     @Override
