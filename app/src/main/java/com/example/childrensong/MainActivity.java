@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.childrensong.activity.SettingsActivity;
 import com.example.childrensong.base.SimpleActivity;
@@ -82,6 +83,12 @@ public class MainActivity extends SimpleActivity {
                     case R.id.tab_look:
                         toolbarTitle.setText("宝宝看");
                         toolbar.setNavigationIcon(R.drawable.icon_app_promotion);
+                        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Toast.makeText(MainActivity.this, "红包", Toast.LENGTH_SHORT).show();
+                            }
+                        });
                         tr1.show(lookFragment);
                         tr1.hide(hearFragment);
                         tr1.hide(cacheFragment);
@@ -89,6 +96,12 @@ public class MainActivity extends SimpleActivity {
                     case R.id.tab_hear:
                         toolbarTitle.setText("宝宝听");
                         toolbar.setNavigationIcon(R.drawable.icon_app_promotion);
+                        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Toast.makeText(MainActivity.this, "红包", Toast.LENGTH_SHORT).show();
+                            }
+                        });
                         tr1.show(hearFragment);
                         tr1.hide(lookFragment);
                         tr1.hide(cacheFragment);
@@ -99,7 +112,6 @@ public class MainActivity extends SimpleActivity {
                         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-
                                 showAnimalDialog();
                               //  popupWindow.showAtLocation(myFrameLayout, Gravity.CENTER, 0, 0);
                                 //  startActivity(new Intent(MainActivity.this, SettingsActivity.class));

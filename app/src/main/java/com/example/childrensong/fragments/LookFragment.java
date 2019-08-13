@@ -50,8 +50,6 @@ public class LookFragment extends BaseFragment<LookTabInterface.LookTabView, Bas
     @Override
     protected void initView() {
         lookTabViewLookTabPresenterImp.getHttp(id);
-
-
     }
 
     @Override
