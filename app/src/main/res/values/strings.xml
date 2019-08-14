@@ -3,4 +3,5 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="share_type_url" translatable="false">%1$sShare【%2$s】special top：%3$s</string>
 </resources>

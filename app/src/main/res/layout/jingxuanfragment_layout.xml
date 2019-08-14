@@ -2,12 +2,11 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="vertical"
     >
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
         <include layout="@layout/item_handpiick"/>
     <android.support.v7.widget.RecyclerView
@@ -18,7 +17,7 @@
         />
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/JXRectwo"
         android:background="@color/white"
         />

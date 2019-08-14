@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="vertical"
+  >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:padding="10dp">
-
     <ImageView
         android:layout_width="180dp"
         android:layout_height="100dp"
@@ -32,3 +36,4 @@
         android:id="@+id/xia_there_image"
         />
 </RelativeLayout>
+</ScrollView>

@@ -5,13 +5,16 @@
         android:title="宝宝看"
         android:id="@+id/tab_look"
         app:showAsAction="ifRoom"
+        android:icon="@drawable/bottom_bar_video_background"
         android:enabled="true"/>
     <item android:title="宝宝听"
         android:id="@+id/tab_hear"
         app:showAsAction="ifRoom"
+        android:icon="@drawable/bottom_bar_audio_background"
         android:enabled="true"/>
     <item android:title="缓存"
         android:id="@+id/tab_cache"
         app:showAsAction="ifRoom"
+        android:icon="@drawable/bottom_bar_mine_background"
         android:enabled="true"/>
 </menu>

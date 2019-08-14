@@ -1,5 +1,6 @@
 package com.example.childrensong.fragments;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Scroller;
 
 import com.example.childrensong.Beans.HandpickImageBeans;
 import com.example.childrensong.Beans.JIngxuanBeans;
@@ -45,9 +47,11 @@ public class JingXuanFragment extends BaseFragment<JingXuanInterface.JingXuanVie
     private JingXuanOneAdapter jingXuanOneAdapter;
     private JingXuanItemAdapter jingXuanItemAdapter;
 
+    @SuppressLint("NewApi")
     @Override
     protected void initView() {
         jingXuanViewJingXuanPresenterImp.getHttp(id);
+
         itemHandpickImage1.setImageResource(R.drawable.timg);
         itemHandpickImage2.setImageResource(R.drawable.meng);
         itemHandpickImage3.setImageResource(R.drawable.wang);

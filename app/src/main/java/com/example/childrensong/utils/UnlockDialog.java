@@ -3,10 +3,15 @@ package com.example.childrensong.utils;
 import android.animation.ObjectAnimator;
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.view.Display;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -63,6 +68,7 @@ public class UnlockDialog extends Dialog {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.setCanceledOnTouchOutside(true);
         this.setContentView(R.layout.pop_math);
+
         mOkListener = okListener;
         TrackUtil.trackEvent(pv, "view");
         bind = ButterKnife.bind(this);
@@ -76,6 +82,14 @@ public class UnlockDialog extends Dialog {
         title.setText(titleString);
         createQuestion();
         bindEvent();
+
+        getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));//透明
+
+        Window window = getWindow();
+        WindowManager.LayoutParams layoutParams = window.getAttributes();
+        layoutParams.gravity = Gravity.BOTTOM;
+        layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
+        window.setAttributes(layoutParams);
     }
 
     public UnlockDialog(Context context, String titleString, String tipString, View.OnClickListener okListener, OnDismissListener onDismissListener) {
@@ -118,12 +132,13 @@ public class UnlockDialog extends Dialog {
         second = result % 10;
         question.setText(left + " x " + right + " = ");
     }
+
     private void bindEvent() {
         for (RelativeLayout view : btn_bgs) {
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(final View v) {
-                   disableFor1Second(v);
+                    disableFor1Second(v);
                     TextView tv = (TextView) ((RelativeLayout) v).getChildAt(0);
                     int number = Integer.parseInt(tv.getText().toString());
 
@@ -155,8 +170,6 @@ public class UnlockDialog extends Dialog {
                 }
             });
         }
-
-
     }
 
 
