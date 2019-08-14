@@ -5,6 +5,6 @@
     <corners android:radius="25dp" />
 
     <!-- 填充的颜色 -->
-    <solid android:color="@color/line_divider" />
+    <solid android:color="#00FFFFFF" />
 
 </shape>

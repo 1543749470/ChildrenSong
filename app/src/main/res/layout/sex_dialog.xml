@@ -3,9 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +39,7 @@
             android:drawableTop="@drawable/head_boy"
             android:text="男宝宝"
             android:id="@+id/nanboby"
-            android:background="@drawable/selector_textcolor"
+            android:textColor="@drawable/selector_textcolor"
             android:gravity="center_horizontal"
             />
         <TextView
@@ -51,7 +50,7 @@
             android:text="女宝宝"
             android:id="@+id/girlboby"
             android:gravity="center_horizontal"
-           android:background="@drawable/selector_textcolor"
+            android:textColor="@drawable/selector_textcolor"
             />
     </LinearLayout>
     <LinearLayout

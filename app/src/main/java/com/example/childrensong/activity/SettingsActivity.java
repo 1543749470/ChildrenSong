@@ -121,12 +121,6 @@ public class SettingsActivity extends SimpleActivity {
         }
     }
 
-    private void initSearch(View v) {//分享推荐
-        disableFor1Second(v);
-
-
-
-    }
     private void initshare() {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_type_url,getString(R.string.app_name),"海量儿歌故事，早教育儿必备", "http://a.app.qq.com/o/simple.jsp?pkgname=com.mampod.ergedd"));
@@ -135,27 +129,6 @@ public class SettingsActivity extends SimpleActivity {
     }
 
 
-    public static void disableFor1Second(final View v) {
-        disable(v, 1000);
-    }
-
-    private static void disable(final View v, long duration) {
-        if (v == null) {
-            return;
-        }
-
-        try {
-            v.setEnabled(false);
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    v.setEnabled(true);
-                }
-            }, duration);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
     private void showDialog() {
         View inflate = View.inflate(this, R.layout.sex_dialog, null);
         Button sex_close = inflate.findViewById(R.id.sex_close);
