@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:background="@drawable/share_dialog"
+        >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="性别"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        />
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/webview_lock_close"
+        />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/head_boy"
+            android:text="男宝宝"
+            android:id="@+id/nanboby"
+            android:background="@drawable/selector_textcolor"
+            android:gravity="center_horizontal"
+            />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/head_girl"
+            android:text="女宝宝"
+            android:id="@+id/girlboby"
+            android:gravity="center_horizontal"
+           android:background="@drawable/selector_textcolor"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_marginLeft="40dp"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="取消"
+            android:background="@drawable/share_dialog"
+            android:id="@+id/sex_close"
+
+            />
+        <Button
+            android:layout_marginLeft="70dp"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="确认"
+            android:id="@+id/sex_ok"
+            android:background="@drawable/share_dialog"
+
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
